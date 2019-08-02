@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.myapplication.adapter.VpAdapter;
 import com.example.myapplication.fragment.AFragment;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mTab.getTabAt(1).setText("二娃").setIcon(R.mipmap.ic_launcher);
         mTab.getTabAt(2).setText("三娃").setIcon(R.mipmap.ic_launcher);
         mTab.getTabAt(3).setText("四娃").setIcon(R.mipmap.ic_launcher);
+        Toast.makeText(this, "更新了", Toast.LENGTH_SHORT).show();
     }
 
     private void initView() {
