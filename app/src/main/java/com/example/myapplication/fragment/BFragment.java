@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
 
@@ -14,6 +16,9 @@ import com.example.myapplication.R;
  */
 public class BFragment extends Fragment {
 
+
+    private View view;
+    private TextView mBt;
 
     public BFragment() {
         // Required empty public constructor
@@ -24,7 +29,19 @@ public class BFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_b, container, false);
+        View inflate = inflater.inflate(R.layout.fragment_b, container, false);
+        initView(inflate);
+        return inflate;
     }
 
+    private void initView(View inflate) {
+        mBt = inflate.findViewById(R.id.bt);
+        mBt.setText("ddgdgdddgd");
+        mBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "ddd", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }
